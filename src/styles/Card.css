@@ -1,0 +1,27 @@
+div.card {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  min-width: 5rem;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  transition: 0.02s linear;
+}
+
+div.card:hover {
+  transform: scale(1.1);
+  transition: 0.05s linear;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
+div.emoji-cont {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+}

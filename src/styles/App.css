@@ -1,0 +1,83 @@
+:root {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  max-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #fafafa;
+}
+
+.hflex {
+  display: flex;
+}
+
+.vflex {
+  display: flex;
+  flex-direction: column;
+}
+
+div#page-cont {
+  width: 75vw;
+  margin: 1rem auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header > h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+header > p {
+  font-size: 1.2rem;
+  position: relative;
+  top: 0.12rem;
+  opacity: 80%;
+}
+
+main {
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+div#sidebar-cont {
+  width: 25%;
+}
+
+section#score-cont {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+div.score {
+  width: 100%;
+}
+
+div.score > p {
+  font-size: 5rem;
+}
