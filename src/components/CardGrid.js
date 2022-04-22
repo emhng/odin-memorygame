@@ -119,16 +119,36 @@ const CardGrid = () => {
     '😾'
   ];
 
+  let randomEmojiList = [];
+
+  const randomIndex = () => {
+    return Math.floor(Math.random() * emojiList.length);
+  };
+
+  const randomEmoji = () => {
+    const index = randomIndex();
+    const randomEmoji = emojiList[index];
+
+    //Remove emoji from array so it cannot be picked twice
+    emojiList.splice(index, 1);
+
+    return randomEmoji;
+  };
+
   const generatedCards = [];
 
-  for (const emoji of emojiList) {
-    if (generatedCards.length === 16) {
-      break;
-    }
-    generatedCards.push(<Card emoji={emoji} />);
+  for (let i = 0; i < 16; i++) {
+    console.log(emojiList.length);
+    generatedCards.push(<Card emoji={randomEmoji()} key={i} />);
   }
 
-  return <div id='card-grid'>{generatedCards}</div>;
+  console.log(emojiList.length);
+
+  return (
+    <div onClick={e => console.log(e)} id='card-grid'>
+      {generatedCards}
+    </div>
+  );
 };
 
 export default CardGrid;
