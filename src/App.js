@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles/App.css';
 import CardGrid from './components/CardGrid';
+import Score from './components/Score';
 
 function App () {
   return (
@@ -12,14 +13,8 @@ function App () {
             <p>Avoid clicking on the same emoji twice!</p>
           </header>
           <section className='vflex' id='score-cont'>
-            <div className='score'>
-              <h2>Current Score</h2>
-              <p>0</p>
-            </div>
-            <div className='score'>
-              <h2>Best Score</h2>
-              <p>0</p>
-            </div>
+            <Score type='Current' score='0' />
+            <Score type='Best' score='0' />
           </section>
         </div>
         <CardGrid />

@@ -1,0 +1,7 @@
+div.score {
+  width: 100%;
+}
+
+div.score > p {
+  font-size: 5rem;
+}

@@ -73,11 +73,3 @@ section#score-cont {
   align-items: center;
   gap: 2rem;
 }
-
-div.score {
-  width: 100%;
-}
-
-div.score > p {
-  font-size: 5rem;
-}
