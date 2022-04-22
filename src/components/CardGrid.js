@@ -1,7 +1,7 @@
 import '../styles/CardGrid.css';
 import Card from '../components/Card';
 
-const CardGrid = () => {
+const CardGrid = ({ onClick }) => {
   const emojiList = [
     '😀 ',
     '😃',
@@ -119,8 +119,6 @@ const CardGrid = () => {
     '😾'
   ];
 
-  let randomEmojiList = [];
-
   const randomIndex = () => {
     return Math.floor(Math.random() * emojiList.length);
   };
@@ -145,7 +143,7 @@ const CardGrid = () => {
   console.log(emojiList.length);
 
   return (
-    <div onClick={e => console.log(e)} id='card-grid'>
+    <div onClick={onClick} id='card-grid'>
       {generatedCards}
     </div>
   );

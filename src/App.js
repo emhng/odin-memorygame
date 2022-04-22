@@ -6,6 +6,7 @@ import Score from './components/Score';
 function App () {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [clickedEmojis, setClickedEmojis] = useState([]);
 
   return (
     <div id='page-cont'>
@@ -20,7 +21,26 @@ function App () {
             <Score type='Best' score={bestScore} />
           </section>
         </div>
-        <CardGrid />
+        <CardGrid
+          onClick={event => {
+            const emoji = event.target.textContent;
+
+            if (clickedEmojis.indexOf(emoji) === -1) {
+              setCurrentScore(currentScore + 1);
+              setClickedEmojis(clickedEmojis.concat(emoji));
+            } else {
+              setCurrentScore(0);
+              setClickedEmojis([]);
+            }
+
+            if (
+              currentScore >= bestScore &&
+              clickedEmojis.indexOf(emoji) === -1
+            ) {
+              setBestScore(currentScore + 1);
+            }
+          }}
+        />
       </main>
     </div>
   );
