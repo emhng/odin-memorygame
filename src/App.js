@@ -40,6 +40,7 @@ function App () {
               setBestScore(currentScore + 1);
             }
           }}
+          clickedEmojis={clickedEmojis}
         />
       </main>
     </div>
