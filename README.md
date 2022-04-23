@@ -1,6 +1,6 @@
 # TOP Javascript Course Project - CV Maker
 
-04/20/2022 ~
+04/20/2022 ~ 04/22/2022
 
 ## Objectives
 
@@ -12,3 +12,5 @@ Your game should include the following:
 - Randomize the cards each time
 
 ## Learnings
+
+Getting a better feel for how to code inside of React.
