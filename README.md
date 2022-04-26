@@ -1,4 +1,4 @@
-# TOP Javascript Course Project - CV Maker
+# TOP Javascript Course Project - Memory Game
 
 04/20/2022 ~ 04/22/2022
 
