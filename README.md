@@ -1,6 +1,8 @@
 # TOP Javascript Course Project - Memory Game
 
-04/20/2022 ~ 04/22/2022
+![Preview](preview.png)
+
+[Play Emoji Memory Game](https://emhng.github.io/odin-memorygame/)
 
 ## Playing locally
 
@@ -20,9 +22,7 @@ npm install
 npm start
 ```
 
-If for some reason the command doesn't pull up a window for you, you can visit localhost:3000 in your browser to access the game.
-
-## Objectives
+## Project Objectives
 
 Using react.js - functional components and hooks, create a memory game where players must avoid clicking on the same card twice.
 
