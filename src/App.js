@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import './styles/App.css';
-import CardGrid from './components/CardGrid';
-import Score from './components/Score';
+import React, { useState } from 'react'
+import './styles/App.css'
+import CardGrid from './components/CardGrid'
+import Score from './components/Score'
 
 function App () {
-  const [currentScore, setCurrentScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [clickedEmojis, setClickedEmojis] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
+  const [clickedEmojis, setClickedEmojis] = useState([])
 
   const handleCardGridClick = event => {
-    const emoji = event.target.textContent;
+    const emoji = event.target.textContent
 
     if (clickedEmojis.indexOf(emoji) === -1) {
-      setCurrentScore(currentScore + 1);
-      setClickedEmojis(clickedEmojis.concat(emoji));
+      setCurrentScore(currentScore + 1)
+      setClickedEmojis(clickedEmojis.concat(emoji))
     } else {
-      setCurrentScore(0);
-      setClickedEmojis([]);
+      setCurrentScore(0)
+      setClickedEmojis([])
     }
 
     if (currentScore >= bestScore && clickedEmojis.indexOf(emoji) === -1) {
-      setBestScore(currentScore + 1);
+      setBestScore(currentScore + 1)
     }
-  };
+  }
 
   return (
     <div id='page-cont'>
@@ -40,7 +40,7 @@ function App () {
         <CardGrid onClick={handleCardGridClick} clickedEmojis={clickedEmojis} />
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
