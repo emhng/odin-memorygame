@@ -57,6 +57,7 @@ header > p {
   position: relative;
   top: 0.12rem;
   opacity: 80%;
+  width: 25ch;
 }
 
 main {
